@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css" />
+    <title>Booking Form</title>
+
+</head>
+<body>
+
+    <form id="bookingForm" action="insert.php" method="POST">
+        <h2>Guest Booking Form</h2>
+        <div id="message"></div>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" placeholder="Name" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Surname: </td>
+                <td><input type="text" placeholder="Surname" name="surname" required></td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td>
+                    <input type="radio" name="gender" value="M" required> Male
+                    <input type="radio" name="gender" value="F" required> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Email Address: </td>
+                <td><input type="mail" placeholder="johndoe@gmail.com" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Phone no: </td>
+                <td>
+                    <select name="phoneCode" required>
+                        <option selected hidden value="">Select Code</option>
+                        <option value="+27">+27</option>
+                        <option value="+28">+28</option>
+                        <option value="+29">+29</option>
+                        <option value="+210">+210</option>
+                        <option value="+211">+211</option>
+                        <option value="+212">+212</option>
+                        <option value="+213">+213</option>
+                    </select>
+                    <input type="phone" placeholder="0712345678" name="phoneno" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Check-In</td>
+                <td><input type="date" id="checkin" name="checkin" required></td>
+            </tr>
+            <tr>
+                <td>Check-Out</td>
+                <td><input type="date" id="checkout" name="checkout" required></td>
+            </tr>
+            <tr>
+                <td>Room Type: </td>
+                <td>
+                    <select name="roomtype" required>
+                        <option selected hidden value="">Select Room Type</option>
+                        <option value="single">Single Room</option>
+                        <option value="double">Double Room</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Number of Guests: </td>
+                <td>
+                    <select name="numberofguests" required>
+                        <option selected hidden value="">Select Number Of Guests</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Number of Rooms: </td>
+                <td>
+                    <select name="numberofrooms" required>
+                        <option selected hidden value="">Select Number Of Rooms</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </td>
+            </tr>
+            <table>
+                <h2>Payment</h2>
+                <tr>
+                    <td><label for="owner">Owner Name:</label></td>
+                    <td><input type="text" id="owner" name="owner" placeholder="Card Owner" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cvv">CVV:</label></td>
+                    <td><input type="password" id="cvv" name="cvv" placeholder="CVV" required></td>
+                </tr>
+                <tr>
+                    <td><label for="cardNumber">Card Number:</label></td>
+                    <td><input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" required></td>
+                </tr>
+                <tr>
+                    <td><label for="expiryDate">Expiry Date:</label></td>
+                    <td>
+                        <select name="exmonth" id="months" required>
+                            <option selected hidden value="">Select Month</option>
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun">Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sep">Sep</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                        </select>
+                        <select name="exyear" id="years" required>
+                            <option selected hidden value="">Select Year</option>
+                            <option value="2020">2029</option>
+                            <option value="2019">2028</option>
+                            <option value="2018">2027</option>
+                            <option value="2017">2026</option>
+                            <option value="2016">2025</option>
+                            <option value="2015">2024</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Payment Methods:</td>
+                    <td>
+                        <img src="assets/mc.png" alt="MasterCard" style="width:40px;height:25px;">
+                        <img src="assets/vi.png" alt="Visa" style="width:40px;height:25px;">
+                        <img src="assets/pp.png" alt="PayPal" style="width:40px;height:25px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Price:</td>
+                    <td><span id="totalPrice" name="totalPrice">R0</span></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Confirm Payment" id="confirmPaymentButton">
+                    </td>
+                </tr>
+            </table>
+        </table>
+    </form>
+
+    <script src="booking.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+table input[type="text"],
+table input[type="mail"],
+table input[type="phone"],
+table input[type="date"],
+table select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+table input[type="radio"] {
+    margin-right: 5px;
+}
+
+table input[type="submit"] {
+    background-color: #f04f77;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+table input[type="submit"]:hover {
+    background-color: #f7729a;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: green;
+    text-align: center;
+    margin-bottom: 20px;
+}

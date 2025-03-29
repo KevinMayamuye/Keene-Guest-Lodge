@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+h2 {
+    color: #34495e;
+}
+
+.receipt {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-top: 20px;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+p {
+    margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+strong {
+    color: #d02c2c; /* Color for labels */
+}
+
+.thank-you {
+    margin-top: 20px;
+    font-style: italic; /* Italic style for thank-you note */
+    color: #7f8c8d; /* Grey color for thank-you message */
+}
